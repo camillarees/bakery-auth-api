@@ -3,7 +3,7 @@
 class DataCollection {
 
   constructor(model) {
-    this.model;
+    this.model = model;
   }
 
   get(id) {

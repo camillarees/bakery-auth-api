@@ -21,6 +21,13 @@ const userModel = (sequelize, DataTypes) => {
       required: true,
       defaultValue: 'user',
     },
+    token: {
+      type: DataTypes.VIRTUAL,
+      get() {
+        console.log(SECRET);
+        return jwt.sign({ username: this.username }, SECRET);
+      },
+    },
     capabilities: {
       type: DataTypes.VIRTUAL,
       get() {
