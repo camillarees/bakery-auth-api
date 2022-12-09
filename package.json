@@ -1,7 +1,7 @@
 {
   "name": "bakery-auth-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "![UML](assets/bakery-uml.png)",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -30,5 +30,14 @@
     "sequelize-cli": "^6.5.2",
     "sqlite3": "^5.1.2",
     "supertest": "^6.3.2"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camillarees/bakery-auth-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/camillarees/bakery-auth-api/issues"
+  },
+  "homepage": "https://github.com/camillarees/bakery-auth-api#readme"
 }
