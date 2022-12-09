@@ -11,7 +11,7 @@ module.exports = (capability) => {
         next('Access Denied');
       }
     } catch(e) {
-      next('Invalid Login');
+      next('Invalid Role');
     }
   };
 };

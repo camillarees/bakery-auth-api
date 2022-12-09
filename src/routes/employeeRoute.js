@@ -41,7 +41,7 @@ async function handleCreate(req, res) {
 }
 
 async function handleUpdate(req, res) {
-  const id = req.param.id;
+  const id = req.params.id;
   const obj = req.body;
   let updateData = await req.model.update(id, obj);
   res.status(200).json(updateData);

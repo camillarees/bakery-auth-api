@@ -5,10 +5,10 @@ const { users } = require('../../models');
 module.exports = async (req, res, next) => {
 
   try {
-
     if (!req.headers.authorization) { _authError(); }
-
-    const token = req.header.authorization.split(' ').pop();
+    
+    const token = req.headers.authorization.split(' ').pop();
+    console.log('Hello', token);
     const validUser = await users.authenticateToken(token);
     req.user = validUser;
     req.token = validUser.token;
@@ -19,7 +19,7 @@ module.exports = async (req, res, next) => {
   }
 
   function _authError() {
-    next('Invalid Login');
+    next('Invalid Token');
   }
   
 };
