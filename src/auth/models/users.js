@@ -43,7 +43,7 @@ const userModel = (sequelize, DataTypes) => {
   });
 
   model.beforeCreate(async (user) => {
-    let hashPass = await bcrypt.hash(user.password, 5);
+    let hashPass = await bcrypt.hash(user.password, 10);
     user.password = hashPass;
   });
 
